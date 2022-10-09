@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Fraunces:opsz,wght@9..144,500&family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@500;700&family=Overpass:wght@400;700&family=Space+Grotesk:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-size: 1.125rem;
+    font-family: 'Space Grotesk', sans-serif;
+}
+.container{
+    
+    display: flex;
+    align-items: center;
+    gap: 17rem;
+}
+
+.rightContainer{
+    background-image: url(./images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    width: 27.5rem;
+    height: 50rem;
+}
+
+.card-front{
+    background-image: url(./images/bg-card-front.png);
+    width: 25rem;
+    background-repeat: no-repeat;
+    height: 14rem;
+    position: relative;
+    top: 7rem;
+    left: 9rem;
+}
+.user{
+    width: 3rem;
+    background-color: white;
+    height: 3rem;
+    /* margin: 2rem; */
+    border-radius: 50%;
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+}
+.circle{
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    position: absolute;
+    border: 1px solid white;
+    /* bottom: 4.3rem; */
+    left: 6rem;
+    top: 2rem;
+}
+#card-number{
+        /* text-align: center; */
+        font-size: 1.8rem;
+        color: white;
+        /* word-spacing: 0.2rem; */
+        font-weight: 300;
+        letter-spacing: .1rem;
+        /* margin-bottom: 0rem; */
+        /* margin-top: 5rem; */
+        position: absolute;
+        top: 6rem;
+        left: 2rem;
+    }
+
+
+.gapping{
+       /* margin-top: 1.5rem; */
+       font-weight: 400;
+       font-size: 1rem;
+       position: absolute;
+       top: 10.5rem;
+       left: 9rem;
+}
+#month{
+    color: white;
+    font-weight: 400;
+    position: relative;
+    font-size: 1rem;
+    left: 10.5rem;
+}
+
+#year{
+    
+    color: white;
+    font-weight: 400;
+    font-size: 1rem;
+    position: relative;
+    left: 10.4rem;
+}
+#holder-name{
+    margin: -10rem 1.8rem;
+    font-size: 1rem;
+    color: white;
+    font-weight: 400;
+    position: absolute;
+    letter-spacing: 0.1rem;
+    top: 20.5rem;
+    left: 0.5rem;
+}
+#change-cvc{
+    /* margin: 5rem 19rem;  */
+    color: white;
+    font-weight: 400;
+    font-size: 1rem;
+    /* z-index: 55; */
+    position: absolute;
+    top: 6rem;
+    left: 20rem;
+}
+
+
+
+.card-back{
+    background-image: url(./images/bg-card-back.png);
+    background-repeat: no-repeat;
+    position: relative;
+    top: 9rem;
+    width: 25rem;
+    height: 14rem;
+    left: 13rem;
+}
+
+
+
+
+
+
+#form{
+    display: grid;
+    align-content: center;
+    grid-template-areas:
+        'one one'
+        'two two'
+        'three four'
+        'five five';
+    gap: 1.3rem;
+    height: 100%;
+    margin-top: -7rem;
+    justify-content: center;
+}
+.holder{
+    grid-area: one;
+}
+.num{
+    grid-area: two;
+}
+.expire{
+ grid-area: three;
+}
+.cvv{
+    grid-area: four;
+}
+.sub{
+    grid-area: five;
+}
+
+label{
+    font-size: .7rem;
+    color: hsl(278, 68%, 11%);
+    font-weight: 600;
+}
+input:focus{
+   outline: 0.01rem solid hsl(249, 99%, 64%);
+    /* outline-color: green */
+    opacity: 1;
+    color:hsl(278, 68%, 11%) ;
+    font-weight: 500;
+}
+input::placeholder{
+    font-size: 14px;
+}
+
+.small{
+    width: 5rem;
+    padding: 0.4rem;
+    border: 0.01rem solid gray;
+    border-radius: 6px;
+    opacity: 0.8;
+}
+#cvc{
+    width: 6.8rem;
+    padding: 0.4rem;
+    border: 0.01rem solid gray;
+    border-radius: 6px;
+    opacity: 0.8;
+}
+
+.same{
+    width: 18.5rem;
+    padding: 0.4rem;
+    border: 0.02rem solid gray;
+    border-radius: 6px;
+    opacity: 0.8;
+}
+#submit{
+    width: 18.5rem;
+    color: white;
+    background-color: hsl(278, 68%, 11%);
+    padding: 0.6rem;
+    border: none;
+    border-radius: 10px;
+    font-size: .8rem;
+    font-weight: 500;
+}
+.error-style{
+    font-size: .6rem;
+    color: hsl(0, 100%, 66%);
+    font-weight: 500;
+    opacity: 0;
+}
+.errors{
+    display: flex;
+    justify-content: space-around;
+}
+.error-style-aval{
+    opacity: 1;
+}
+.thanks-container{
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    display: none; 
+    margin-bottom: 11rem;
+}
+#thanks{
+    letter-spacing: 2px;
+    font-size: 2rem;
+    font-weight: 500;
+}
+#para{
+    color: gray;
+    font-weight: 500;
+}
+button{
+    width: 18.5rem;
+    color: white;
+    background-color: hsl(278, 68%, 11%);
+    padding: 0.6rem;
+    border: none;
+    border-radius: 10px;
+    font-size: .8rem;
+    font-weight: 500;
+    
+}
+
+@media screen and (max-width:430px) {
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .rightContainer{
+        background-image: url(./images/bg-main-mobile.png);
+    width: 100%;
+    height: 14rem;
+    background-repeat: repeat-x;
+    
+        
+    }
+    .card-front{
+        top: 5rem;
+        left: -3rem;
+        z-index: 1;
+        transform: scale(.6);
+    }
+    .card-back{
+        left: -1rem;
+        transform: scale(.6);
+        /* bottom: 6rem; */
+        top: -14rem;
+    }
+    #form{
+        margin-top: -14.5rem;
+    }
+    .thanks-container{
+      margin-top:   -13.5rem;
+      margin-bottom: 0;
+    }
+   
+}
+@media screen and (max-width:281px) {
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .rightContainer{
+        background-image: url(./images/bg-main-mobile.png);
+    width: 119%;
+    height: 14rem;
+    background-repeat: repeat-x;
+    
+        
+    }
+    .card-front{
+        top: 4rem;
+        left: -4rem;
+        z-index: 1;
+        
+        transform: scale(.45);
+    }
+    .card-back{
+        left: -1rem;
+    transform: scale(.45);
+    /* bottom: 6rem; */
+    top: -14rem;
+}
+    
+    #form{
+        margin-top: -16.5rem;
+        transform: scale(.8);
+    }
+    .thanks-container{
+        margin-top: -16.5rem;
+        transform: scale(.8);
+    }
+}
+   
+
+
+
